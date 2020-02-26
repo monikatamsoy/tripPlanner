@@ -1,8 +1,29 @@
 .App {
   text-align: center;
+  background-image: url("https://images.wallpaperscraft.com/image/traffic_cars_city_124064_3840x2400.jpg");
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  background-color: #cccccc;
+  height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  /* filter: blur(3px); */
+}
+.optionsButton{
+  margin-right: 5px;
+  
 }
 
-.App-header {
+
+/* .App-header {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -29,11 +50,11 @@
   left: 50%;
   transform: translate(-50%, -50%);
   /* opacity: 0.2; */
-  font-size: calc(10px + 2vmin);
+  /* font-size: calc(10px + 2vmin);
   color: white;
   
 }
 .card-header {
   display: flex;
   flex-direction: row;
-}
+} */ 

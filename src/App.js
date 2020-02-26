@@ -2,6 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Plan from './components/Plan';
+import { Button, Container, Card, Image,ButtonToolbar, Row } from 'react-bootstrap';
 
 class App extends React.Component {
   constructor(props){
@@ -24,25 +25,30 @@ class App extends React.Component {
   render(){
   
   return (
-    <div className="App">
-      <header className="App-header">
+    <Container className = "App" fluid >
       
-        
-      </header>
-      <div className="card">
-  <div className="card-header">
-    
-  <button className="btn btn-link"  value="one-way" onClick = {this.setAction}>ONE WAY
-  {/* {this.state.action ? <Plan/> : console.log('hello')} */}
-  </button>
-  <button className="btn btn-link" value="round-trip" onClick = {this.setAction}>ROUND TRIP</button>
-  <button className="btn btn-link"  value="multi-city" onClick = {this.setAction}>MULTI CITY</button>
-  <button className="btn btn-link"  >PACKAGE</button>
-  </div>
-    
+      <Card className="card" >
+      <Card.Body>
+      <ButtonToolbar className="optionsButton"  data-toggle="modal" data-target="#bookModal" onClick = {this.setAction}>
+  
+  
+  <Button className="optionsButton" value="ONE WAY"  >ONE WAY
+  
+  </Button>
+  <Button className="optionsButton" value="ROUND TRIP" onClick = {this.setAction}>ROUND TRIP</Button>
+  <Button  className="optionsButton" value="MULTI CITY" onClick = {this.setAction}>MULTI CITY</Button>
+  <Button   >PACKAGE</Button>
+  </ButtonToolbar>
+  </Card.Body>
+  </Card>
+
+
+<div>
+{this.state.action? <Plan action={this.state.action}/> : ''} 
+{console.log(this.state.action)}
 </div>
   
-    </div>
+    </Container>
    
   );
 }
