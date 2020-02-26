@@ -28,11 +28,12 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  opacity: 0.2;
+  /* opacity: 0.2; */
   font-size: calc(10px + 2vmin);
   color: white;
   
 }
-.card-text{
-  color: white;
+.card-header {
+  display: flex;
+  flex-direction: row;
 }
