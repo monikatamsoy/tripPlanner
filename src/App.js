@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {setState} from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Plan from './components/Plan';
@@ -16,10 +16,14 @@ class App extends React.Component {
 
     }
     this.setAction = this.setAction.bind(this);
+    this.onChange = this.onChange.bind(this);
   }
   setAction(e){
     this.setState({action : e.target.value})
     
+  };
+  onChange = (newName) => {  
+   this.setState({ action : newName })
   };
   debugger;
   render(){
@@ -44,7 +48,8 @@ class App extends React.Component {
 
 
 <div>
-{this.state.action? <Plan action={this.state.action}/> : ''} 
+{this.state.action? <Plan action={this.state.action}
+onOptionChange={this.onChange}/> : ''} 
 {console.log(this.state.action)}
 </div>
   
